@@ -6,28 +6,53 @@ Problem 10*/
 #include <stdlib.h>
 #include <stdio.h>
 using namespace std;
-/* Current Logic = Brute Force
-Runtime ~43min 57 seconds
-THIS IS HORRIBLE!!!!!!! COMING BACK TO THIS CODE!!!!!*/
+/*Runtime ~ 2-3 minutes
+Still not where I want it but considerably better than before*/
 int main(){
-	long long total = 17;
+	int j = 0;
+	long long total = 0;
 	int isPrime = 0;
-	for (int i = 11; i < 2000000; i=i+2){
-		for (int j = i/2; j >=1; j--){
-			if (i % 5 == 0){ 
-				break;
-			}else if (i%j == 0){
+	for (int i = 1; i < 2000000; i++){
+		if (i % 2 == 0){
+			if (2 * 2 == i){
+				isPrime = isPrime + 2;
+			}else{
 				isPrime++;
-			}if (isPrime > 1){
-				break;
+			}
+		}
+		if (i % 3 == 0){
+			if (3 * 3 == i){
+				isPrime = isPrime + 2;
+			}else{
+				isPrime++;
+			}
+		}
+		if (i % 5 == 0){
+			if (5 * 5 == i){
+				isPrime = isPrime + 2;
+			}else{
+				isPrime++;
+			}
+		}
+		if (isPrime == 0){
+			for (int k = 7; k < i / 2; k = k + 2){
+				if (k % 5 == 0){
+					k = k + 2;
+				}
+				if (i%k == 0){
+					isPrime++;
+					break;
+				}
 			}
 		}
 
-		if (isPrime == 1){
+		if (i < 7 && isPrime==1){
+			total = total + i;
+		}
+		else if (isPrime == 0 && i > 6){
 			total = total + i;
 		}
 		isPrime = 0;
-
 	}
 	cout << total << '\n';
 	system("pause");
