@@ -210,3 +210,11 @@ FakesAssemblies/
 *.vcxproj
 *.sln
 *.vcxproj.filters
+
+#Folders I dont want gitignore applied to
+!ProjectEulerInterface
+!ProjectEulerInterface/*
+!ProjectEulerInterface/*/*
+!ProjectEulerInterface/*/*/*
+!ProjectEulerInterface/*/*/*/*
+!ProjectEulerInterface/*/*/*/*/*
