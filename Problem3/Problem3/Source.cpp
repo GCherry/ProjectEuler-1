@@ -4,7 +4,7 @@ Problem 3*/
 
 #include <iostream>
 #include <stdio.h>
-#include "../../Functions.h"
+#include "../../Header Files/Functions.h"
 using namespace std;
 
 int main() {
