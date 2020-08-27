@@ -9,3 +9,5 @@ ProjectEuler is website that provides mathematical problems that would take fore
 
 I personally am using this out of interest and to stay active with coding.
 Only C++ files are added in each problem, not the entire C++ solution.  C++ solution will be added when I finish implementation of the GUI I want to create.
+
+Good work, we out here!
